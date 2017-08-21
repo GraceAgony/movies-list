@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: 300;
+    background-color: #FDE6EB;
+    color: #60269B;
+}
+
+#mount-point{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

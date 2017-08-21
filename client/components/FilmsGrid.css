@@ -1,0 +1,7 @@
+#FilmGrid {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
