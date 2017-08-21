@@ -1,14 +1,14 @@
-To run 
-1.Clone this repository
-2.install Node.js, npm, Mongodb
-2.move to movies-list
-3.run this commands: 
-	npm install
-	npm run server
-	npm run webpack-devserver
-4.Open http://localhost:8090 in browser
+# To run 
+* Clone this repository
+* install Node.js, npm, Mongodb
+* move to movies-list
+* run this commands: 
+	* npm install
+	* npm run server
+	* npm run webpack-devserver
+* Open http://localhost:8090 in browser
 
-Description
+# Description
 Application is bulid use Node.js  runtime environment that runs back-end application (via Express).
 The Express framework uses to implement a REST API to allow clients to send requests of the MongoDB database. 
 It simplifies the routing and processing of requests.
