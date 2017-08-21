@@ -70,7 +70,7 @@ class FilmAdd extends React.Component{
     render(){
         return (
             <div id="formDiv">
-                <button id="openModalAdd" className="btn" onClick={this.handleOpenModal}>Add film</button>
+                <button id="openModalAdd" className="btn" onClick={this.handleOpenModal}>Add</button>
             <Modal
                 isOpen={this.state.isOpen}
                 contentLabel="Modal"
@@ -85,7 +85,7 @@ class FilmAdd extends React.Component{
                         <input className="labelInput" type="text" placeholder="Enter stars" value={this.state.stars} onChange={this.handleChangeStars} />
                     </div>
                 </form>
-                <input id="addFilmButton"  type="submit" value="Submit" onClick={this.handleSubmit}/>
+                <input id="addFilmButton"  className="btn" type="submit" value="Submit" onClick={this.handleSubmit}/>
 
             </Modal>
         </div>

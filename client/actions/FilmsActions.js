@@ -74,8 +74,7 @@ const FilmsActions = {
 
     ascendingSort(){
         api.ascendingSort()
-            .then(() =>
-                ({ data }) =>{
+            .then(({ data }) =>{
                     AppDispatcher.dispatch({
                         type: Constants.LOAD_FILMS_SUCCESS,
                         films: data
@@ -88,8 +87,7 @@ const FilmsActions = {
 
     descendingSort(){
         api.descendingSort()
-            .then(() =>
-                ({ data }) =>{
+            .then(({ data }) =>{
                     AppDispatcher.dispatch({
                         type: Constants.LOAD_FILMS_SUCCESS,
                         films: data

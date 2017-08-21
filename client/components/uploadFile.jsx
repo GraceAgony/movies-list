@@ -32,7 +32,7 @@ class UploadFile extends React.Component{
         return(
             <form id="uploadForm">
                 <div id="fileContainer">
-                    <img src={require('../image/upload-file.png')}/>
+                    <img className="img" src={require('../image/upload-file.png')}/>
             <input id="upload" className="inputfile" ref="upload" type="file" accept=".txt"
                     onChange={(event)=> {
                        this.readFile(event)

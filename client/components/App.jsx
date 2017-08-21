@@ -10,7 +10,6 @@ import SortBox from './SortBox.jsx'
 
 import './app.css';
 import UploadFile from "./uploadFile";
-import {ascendingSort, descendingSort} from "../../server/utils/DataBaseUtils";
 
 
 function getStateFromFlux() {
@@ -30,6 +29,9 @@ class App extends React.Component{
         this.handleFilmDelete = this.handleFilmDelete.bind(this);
         this._onChange = this._onChange.bind(this);
         this.handleUploadSubmit = this.handleUploadSubmit.bind(this);
+        this.handleAscendingSort = this.handleAscendingSort.bind(this);
+        this.handleDescendingSort = this.handleDescendingSort.bind(this);
+        this.handleSort= this.handleSort.bind(this);
     };
 
     componentWillMount() {
@@ -75,11 +77,11 @@ class App extends React.Component{
 
     handleSort(sortType){
         if(sortType == 'ascending'){
-            ascendingSort();
+            this.handleAscendingSort();
         }else{
-            descendingSort();
+             this.handleDescendingSort();
         };
-    }
+    };
 
     render(){
         return(

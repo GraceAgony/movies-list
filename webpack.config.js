@@ -16,7 +16,7 @@ module.exports = {
                 options: {
                 presets:['react']
                 },
-                exclude: [/node_modules/, /public/]
+                exclude: [/node_modules/, /public/, /server/]
             },
             {
                 test: /\.css$/,

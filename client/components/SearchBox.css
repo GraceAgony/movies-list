@@ -14,9 +14,6 @@
     outline:none;
     border: 2px solid #F6ABBB;
 }
-.searchbox button{
-    margin-top: 3%;
-}
 
 .btn {
     background-color: #8558B2;
@@ -45,13 +42,12 @@
 }
 
 #selectSearch{
-    width: 80px;
+    width: 40%;
     height: 35px;
     font-size: 1em;
     background-color: white;
     border-radius: 15%;
     border: 2px solid #DE9AD1;
-    margin-top: 3%;
 }
 
 #selectSearch:focus{
