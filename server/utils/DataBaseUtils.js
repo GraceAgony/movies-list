@@ -8,8 +8,16 @@ export function setUpConnection(){
     mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`);
 }
 
-export function listFilms(id) {
+export function listFilms() {
+    return Film.find();
+}
+
+export function ascendingSort() {
     return Film.find().sort({title: 1});
+}
+
+export function descendingSort() {
+    return Film.find().sort({title: -1});
 }
 
 export function createFilm(data) {

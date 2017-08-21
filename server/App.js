@@ -19,6 +19,13 @@ app.get('/films', (req, res) => {
     db.listFilms().then(data => res.send(data));
 });
 
+app.get('/films/ascendingSort', (req, res) => {
+    db.ascendingSort().then(data => res.send(data));
+});
+
+app.get('/films/descendingSort', (req, res) => {
+    db.descendingSort().then(data => res.send(data));
+});
 
 app.post('/films', (req, res) => {
     db.createFilm(req.body).then(data => res.send(data));

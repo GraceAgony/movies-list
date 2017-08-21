@@ -6,9 +6,11 @@ import FilmsGrid from './FilmsGrid.jsx';
 import FilmsStore from '../stores/FilmsStore.js';
 import FilmsActions from '../actions/FilmsActions.js';
 import SearchBox from './SearchBox.jsx';
+import SortBox from './SortBox.jsx'
 
 import './app.css';
 import UploadFile from "./uploadFile";
+import {ascendingSort, descendingSort} from "../../server/utils/DataBaseUtils";
 
 
 function getStateFromFlux() {
@@ -63,6 +65,22 @@ class App extends React.Component{
         FilmsActions.uploadFile(file);
     };
 
+    handleAscendingSort(){
+        FilmsActions.ascendingSort();
+    };
+
+    handleDescendingSort(){
+        FilmsActions.descendingSort();
+    };
+
+    handleSort(sortType){
+        if(sortType == 'ascending'){
+            ascendingSort();
+        }else{
+            descendingSort();
+        };
+    }
+
     render(){
         return(
         <div className="App">
@@ -70,6 +88,7 @@ class App extends React.Component{
                 <SearchBox searchFilm={this.handleSearchFilm}/>
                 <FilmAdd onFilmAdd={this.handleFilmAdd} />
                 <UploadFile handleUploadSubmit={this.handleUploadSubmit}/>
+                <SortBox sort={this.handleSort}/>
             </div>
             <div id="contentFilm">
                 <FilmsGrid films={this.state.films}

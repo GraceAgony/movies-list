@@ -24,5 +24,13 @@ export default{
 
     uploadFile(file){
         return axios.post(`${apiPrefix}/upload`, {file: file});
+    },
+
+    ascendingSort(){
+        return axios.get(`${apiPrefix}/films/ascendingSort`);
+    },
+
+    descendingSort(){
+        return axios.get(`${apiPrefix}/films/descendingSort`);
     }
 }

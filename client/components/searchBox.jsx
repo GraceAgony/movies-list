@@ -32,7 +32,7 @@ class SearchBox extends React.Component{
     handleTextChange(event){
 
         this.setState({
-            searchString: event.target.value,
+            searchString: event.target.value.trim(),
         });
     };
 

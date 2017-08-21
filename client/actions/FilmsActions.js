@@ -70,6 +70,34 @@ const FilmsActions = {
             .catch(err =>
                 console.error(err)
             );
+    },
+
+    ascendingSort(){
+        api.ascendingSort()
+            .then(() =>
+                ({ data }) =>{
+                    AppDispatcher.dispatch({
+                        type: Constants.LOAD_FILMS_SUCCESS,
+                        films: data
+                    })}
+            )
+            .catch(err =>
+                console.error(err)
+            );
+    },
+
+    descendingSort(){
+        api.descendingSort()
+            .then(() =>
+                ({ data }) =>{
+                    AppDispatcher.dispatch({
+                        type: Constants.LOAD_FILMS_SUCCESS,
+                        films: data
+                    })}
+            )
+            .catch(err =>
+                console.error(err)
+            );
     }
 };
 
