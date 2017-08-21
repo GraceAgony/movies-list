@@ -19,7 +19,6 @@
     "mongoose": "^4.10.8",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "react-masonry-component": "^5.0.7",
     "react-modal": "^2.2.4"
   },
   "devDependencies": {
