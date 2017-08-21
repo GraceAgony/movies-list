@@ -64,12 +64,7 @@ class FilmAdd extends React.Component{
 
         this.props.onFilmAdd(newFilm);
 
-        this.setState({
-            title: '',
-            format: '',
-            releaseYear: 0,
-            stars: ''
-        });
+        this.handleCloseModal();
     };
 
     render(){
@@ -81,7 +76,7 @@ class FilmAdd extends React.Component{
                 contentLabel="Modal"
                 className='Modal'
             >
-                <form id="addFilmForm" onSubmit={this.handleSubmit}>
+                <form id="addFilmForm">
                     <img id="closeImg" onClick={this.handleCloseModal} src={require('../image/cross.png')}/>
                     <div id="inputForm">
                         <input className="labelInput" type="text" placeholder="Enter title" value={this.state.title} onChange={this.handleChangeTitle} />
@@ -90,7 +85,7 @@ class FilmAdd extends React.Component{
                         <input className="labelInput" type="text" placeholder="Enter stars" value={this.state.stars} onChange={this.handleChangeStars} />
                     </div>
                 </form>
-                <input id="addFilmButton"  type="submit" value="Submit" />
+                <input id="addFilmButton"  type="submit" value="Submit" onClick={this.handleSubmit}/>
 
             </Modal>
         </div>
