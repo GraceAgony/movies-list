@@ -23,6 +23,8 @@ class App extends React.Component{
     constructor(props){
         super(props);
 
+        this.sort = 'ascending';
+
         this.state =  getStateFromFlux();
 
         this.handleFilmAdd = this.handleFilmAdd.bind(this);
@@ -32,10 +34,15 @@ class App extends React.Component{
         this.handleAscendingSort = this.handleAscendingSort.bind(this);
         this.handleDescendingSort = this.handleDescendingSort.bind(this);
         this.handleSort= this.handleSort.bind(this);
+
     };
 
     componentWillMount() {
-        FilmsActions.loadFilms();
+        if(this.sort == 'ascending'){
+            this.handleAscendingSort();
+        }else{
+            this.handleDescendingSort();
+        };
     };
 
     componentDidMount() {
@@ -76,6 +83,7 @@ class App extends React.Component{
     };
 
     handleSort(sortType){
+        this.sort = sortType;
         if(sortType == 'ascending'){
             this.handleAscendingSort();
         }else{
