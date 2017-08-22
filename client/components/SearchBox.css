@@ -1,13 +1,15 @@
 .searchbox{
     display: flex;
     flex-direction: row;
-    width: 30%;
-    justify-content: space-around;
+    width: 35%;
+    justify-content: space-between;
 }
 
 .searchbox input{
     border: 2px solid #DE9AD1;
-    height: 70%;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .searchbox input:focus{
@@ -42,12 +44,13 @@
 }
 
 #selectSearch{
-    width: 40%;
+    width: 90px;
     height: 35px;
     font-size: 1em;
     background-color: white;
-    border-radius: 15%;
+    border-radius: 5px;
     border: 2px solid #DE9AD1;
+    font-size: 1em;
 }
 
 #selectSearch:focus{

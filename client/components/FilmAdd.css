@@ -1,5 +1,5 @@
 #formDiv{
-    width: 10%;
+    width: 7%;
 }
 
 .Modal:focus {
@@ -12,10 +12,13 @@
     background-color: white;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
+    height: 230px;
+    margin: auto;
 }
 
-
+#addFilmButton{
+    margin: auto;
+}
 
 div[class^="form-grouplabelInput"] input{
     outline: none;
@@ -24,50 +27,17 @@ div[class^="form-grouplabelInput"] input{
     margin:1% 2% ;
     border: 2px solid #DE9AD1;
     border-radius: 5px;
+    padding: 5px;
 }
 
 div[class^="form-grouplabelInput"] input:focus{
-    background-color: #fde6eb;
+    border: 2px solid #F6ABBB;
 }
 
 .labelInput:focus {
     border: 2px solid #F6ABBB;
 }
 
-#addFilmButton {
-    border: 0 none;
-    border-radius: 24px;
-    padding: 10px 15px;
-    margin: auto;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 40px;
-    text-align: center;
-    line-height: 1.3;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: all 100ms ease-in-out;
-    background: #DE9AD1;
-    color: white;
-}
-
-#addFilmButton:hover {
-     opacity: .9;
-     transition: all 100ms ease;
- }
-
-#addFilmButton:active {
-     opacity: .75;
-     transform: scale(.97);
-     transition: all 100ms ease;
- }
-
-#addFilmButton:focus {
-     outline: 0;
-}
 
 #addFilmButton:disabled{
     cursor: not-allowed;

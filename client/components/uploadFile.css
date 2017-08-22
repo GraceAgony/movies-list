@@ -1,8 +1,8 @@
 #uploadForm{
     display: flex;
     flex-direction: row;
-    width: 15%;
-    justify-content: flex-end;
+    width: 14%;
+    justify-content: space-between;
 }
 
 #fileContainer {
