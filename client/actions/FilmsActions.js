@@ -24,10 +24,15 @@ const FilmsActions = {
             );
     },
 
-    addFilm(film) {
+    addFilm(film, sort) {
         api.addFilm(film)
-            .then(() =>
-                this.loadFilms()
+            .then(() => {
+                    if(sort == 'ascending'){
+                        this.ascendingSort();
+                    }else{
+                        this.descendingSort();
+                    }
+                }
             )
             .catch(err =>
                 console.error(err)
@@ -48,10 +53,15 @@ const FilmsActions = {
             );
     },
 
-    deleteFilm(filmId) {
+    deleteFilm(filmId, sort) {
         api.deleteFilm(filmId)
-            .then(() =>
-                this.loadFilms()
+            .then(() => {
+                    if(sort == 'ascending'){
+                        this.ascendingSort();
+                    }else{
+                        this.descendingSort();
+                    }
+                }
             )
             .catch(err =>
                 console.error(err)

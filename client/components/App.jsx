@@ -38,6 +38,7 @@ class App extends React.Component{
     };
 
     componentWillMount() {
+        console.log(this.sort);
         if(this.sort == 'ascending'){
             this.handleAscendingSort();
         }else{
@@ -54,12 +55,12 @@ class App extends React.Component{
     };
 
     handleFilmDelete(film) {
-        FilmsActions.deleteFilm(film.id);
+        FilmsActions.deleteFilm(film.id, this.sort);
     };
 
 
     handleFilmAdd(data){
-        FilmsActions.addFilm(data);
+        FilmsActions.addFilm(data, this.sort);
     };
 
     _onChange() {
