@@ -3,9 +3,17 @@ import bodyParser from 'body-parser';
 import { serverPort } from '../configuration/config.json';
 import * as db from './utils/DataBaseUtils.js';
 import * as Parser from './utils/Parser.js';
+import config from '../configuration/config.json';
+let morgan = require('morgan');
 
 const app = express();
 db.setUpConnection();
+/*
+if(config.util.getEnv('NODE_ENV') !== 'test') {
+    //morgan для вывода логов в консоль
+    app.use(morgan('combined')); //'combined' выводит логи в стиле apache
+}
+*/
 
 app.use( bodyParser.json() );
 app.use(function(req, res, next) {
@@ -48,3 +56,5 @@ app.post('/upload', (req, res) => {
 const server = app.listen(serverPort, function(){
     console.log(`Server is up and running on port ${serverPort}`);
 });
+
+module.exports = app; // для тестирования

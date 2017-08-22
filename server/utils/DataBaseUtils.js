@@ -6,6 +6,7 @@ const Film = mongoose.model('Film');
 
 export function setUpConnection(){
     mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`);
+
 }
 
 export function listFilms() {
