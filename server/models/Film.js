@@ -6,7 +6,8 @@ const FilmSchema = new Schema({
     title: {type: String, required: true},
     format: {type: String},
     releaseYear: {type: Number},
-    stars: {type: String}
+    stars: {type: String},
+    sortField: {type: String}
 });
 
 const Film = mongoose.model('Film', FilmSchema);

@@ -13,11 +13,11 @@ export function listFilms() {
 }
 
 export function ascendingSort() {
-    return Film.find().sort({title: 1});
+    return Film.find().sort({sortField: 1});
 }
 
 export function descendingSort() {
-    return Film.find().sort({title: -1});
+    return Film.find().sort({sortField: -1});
 }
 
 export function createFilm(data) {
@@ -25,7 +25,8 @@ export function createFilm(data) {
         title: data.title,
         format: data.format,
         releaseYear: data.releaseYear,
-        stars: data.stars
+        stars: data.stars,
+        sortField: data.title.toLowerCase(),
     });
     return film.save();
 }

@@ -59,7 +59,8 @@ class FilmAdd extends React.Component{
             title: this.state.title,
             format: this.state.format,
             releaseYear: this.state.releaseYear,
-            stars: this.state.stars
+            stars: this.state.stars,
+            sortFileld: this.state.title.toLowerCase(),
         };
 
         this.props.onFilmAdd(newFilm);

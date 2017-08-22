@@ -12,9 +12,10 @@ export function ParseFile(file){
         filmString = filmString.trim();
         if(filmString){
             let film = ParseFilmString(filmString);
+            film.sortField = film.title.toLowerCase();
             films.push(film);
         }
-    }
+    };
     return films;
 }
 
