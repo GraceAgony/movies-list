@@ -43,6 +43,7 @@ whether we can process the Action. If the action has been processed, a "change" 
 and Views subscribed to this event respond to it by updating their state.     
 The <App /> component is signed for changes to the repository and invokes actions and passes      
 the data to all the child components via props.     
-	
+Use Mocha and Chai to write tests.
 
-
+# To run test
+* npm run test
