@@ -14,11 +14,11 @@ export function listFilms() {
 }
 
 export function ascendingSort() {
-    return Film.find().sort({sortField: 1});
+    return Film.find().sort({sortField: -1});
 }
 
 export function descendingSort() {
-    return Film.find().sort({sortField: -1});
+    return Film.find().sort({sortField: 1});
 }
 
 export function createFilm(data) {

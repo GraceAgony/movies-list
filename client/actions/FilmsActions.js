@@ -76,7 +76,7 @@ const FilmsActions = {
                         type: Constants.LOAD_FILMS_SUCCESS,
                         films: data
                     })}
-        )
+            )
             .catch(err =>
                 console.error(err)
             );
@@ -85,10 +85,10 @@ const FilmsActions = {
     ascendingSort(){
         api.ascendingSort()
             .then(({ data }) =>{
-                    AppDispatcher.dispatch({
-                        type: Constants.LOAD_FILMS_SUCCESS,
-                        films: data
-                    })}
+                AppDispatcher.dispatch({
+                    type: Constants.LOAD_FILMS_SUCCESS,
+                    films: data
+                })}
             )
             .catch(err =>
                 console.error(err)
@@ -98,10 +98,10 @@ const FilmsActions = {
     descendingSort(){
         api.descendingSort()
             .then(({ data }) =>{
-                    AppDispatcher.dispatch({
-                        type: Constants.LOAD_FILMS_SUCCESS,
-                        films: data
-                    })}
+                AppDispatcher.dispatch({
+                    type: Constants.LOAD_FILMS_SUCCESS,
+                    films: data
+                })}
             )
             .catch(err =>
                 console.error(err)

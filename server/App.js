@@ -8,12 +8,6 @@ let morgan = require('morgan');
 
 const app = express();
 db.setUpConnection();
-/*
-if(config.util.getEnv('NODE_ENV') !== 'test') {
-    //morgan для вывода логов в консоль
-    app.use(morgan('combined')); //'combined' выводит логи в стиле apache
-}
-*/
 
 app.use( bodyParser.json() );
 app.use(function(req, res, next) {
